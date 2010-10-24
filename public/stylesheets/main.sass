@@ -1,0 +1,81 @@
+//global layout
+body
+  font-family: sans-serif
+  background: white
+  color: black
+  padding: 10px
+  text-align: center
+
+@mixin bodyElems  
+  width: 800px
+  text-align: left
+  padding: 10px
+  -webkit-box-shadow: 3px 3px 3px #666
+  box-shadow: 3px 3px 3px #666
+
+#header
+  @include bodyElems
+  background: #ddf1ff
+  background: -webkit-gradient(linear, 0% 0%, 0% 68%, from(#3CCCFF), to(#2266BB), color-stop(.2,#DDDDFF))
+  margin-bottom: 0
+  border: 1px solid black
+  border-bottom: 0
+  overflow: auto
+  -moz-border-top-left-radius: 10px
+  -moz-border-top-right-radius: 10px
+  border-top-left-radius: 10px
+  border-top-right-radius: 10px
+  h1
+    margin-bottom: 0
+    float: left
+    a
+      color: black
+  .nav
+    float: right
+
+#main
+  @include bodyElems
+  background: #f1f5ff
+  border: 1px solid black
+  border-top: 0
+  #footer
+    padding-top: 40px
+    text-align: center
+    font-size: .9em
+    color: grey
+
+form
+  border: .2em dotted grey
+  padding: 1em
+  label
+    display: block
+textarea
+  height: 4em
+
+a
+  color: #1144aa
+
+h1, h2, h3, h4, h5, h6
+  margin-top: 0
+  a
+    text-decoration: none
+  
+// site wide styles
+.contentBlock
+  margin-bottom: 3em
+
+.smallText
+  font-size: .5em
+// homepage
+#howDoesItWork
+  overflow: auto
+  li
+    float: left
+    width: 175px
+  img
+    display: block
+.footNotes
+  @extend .smallText
+  margin-left: 2em
+#new_bless_you
+  width: 22em
