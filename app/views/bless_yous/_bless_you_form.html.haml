@@ -1,0 +1,9 @@
+- form_for @bless_you,
+    :builder => BlessrFormBuilder  do |f|
+  %h2 Send an e-Bless-You NOW!
+  = f.error_messages
+  = f.text_field :to_email
+  = f.text_field :to_name
+  = f.text_field :your_name
+  = f.text_area :message
+  = f.submit "send e-Bless-You", :name => nil

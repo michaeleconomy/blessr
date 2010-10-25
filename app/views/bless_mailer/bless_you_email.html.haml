@@ -1,0 +1,18 @@
+%div
+  hi
+  = h @bless_you.to_name
+%div
+  = h @bless_you.your_name
+  sent you an eBlessYou with
+  = link_to "blessr.com", "http://blessr.com"
+
+- if @bless_you.message?
+  %div
+    included message:
+  %div
+    = h @bless_you.message
+  
+%hr
+%div
+  this message was sent by request to:
+  = h @bless_you.to_email
