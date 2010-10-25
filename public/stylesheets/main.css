@@ -12,7 +12,8 @@ body {
   -webkit-box-shadow: 3px 3px 3px #666666;
   box-shadow: 3px 3px 3px #666666;
   background: #ddf1ff;
-  background: -webkit-gradient(linear, 0% 0%, 0% 68%, from(#3cccff), to(#2266bb), color-stop(0.2, #ddddff));
+  background: -webkit-gradient(linear, 0% 0%, 0% 93%, from(#9ab8ff), to(#9fb8ff), color-stop(0.8, #719fed));
+  background: -moz-linear-gradient(0% 93% 90deg, #9ab8ff, #9fb8ff, #6193ed 80%);
   margin-bottom: 0;
   border: 1px solid black;
   border-bottom: 0;
@@ -24,10 +25,14 @@ body {
   #header h1 {
     margin-bottom: 0;
     float: left; }
-    #header h1 a {
-      color: black; }
+    #header h1 img {
+      vertical-align: text-top; }
+    #header h1 .smallText, #header h1 .footNotes {
+      font-size: 0.2em; }
   #header .nav {
     float: right; }
+    #header .nav a {
+      color: #333333; }
 
 #main {
   width: 800px;
@@ -35,17 +40,26 @@ body {
   padding: 10px;
   -webkit-box-shadow: 3px 3px 3px #666666;
   box-shadow: 3px 3px 3px #666666;
-  background: #f1f5ff;
+  background: #f7fcff;
   border: 1px solid black;
-  border-top: 0; }
+  border-top: 0;
+  -moz-border-bottom-left-radius: 10px;
+  -moz-border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px; }
   #main #footer {
     padding-top: 40px;
     text-align: center;
     font-size: 0.9em;
     color: grey; }
 
+.contentBlock, form {
+  margin-bottom: 3em; }
+
 form {
-  border: 0.2em dotted grey;
+  border: 0.18em dotted grey;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
   padding: 1em; }
   form label {
     display: block; }
@@ -60,9 +74,6 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0; }
   h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
     text-decoration: none; }
-
-.contentBlock {
-  margin-bottom: 3em; }
 
 .smallText, .footNotes {
   font-size: 0.5em; }

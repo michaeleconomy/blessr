@@ -8,15 +8,18 @@
 %body
   #header
     %h1
-      = link_to "blessr.com", "/"
+      = link_to image_tag("blessr.png"), "/"
       %span.smallText (beta)
     .nav
-      = link_to "Home", "/"
+      = link_to_unless_current "Home", "/"
       &middot;
-      = link_to "News", news_path
+      = link_to_unless_current "News", news_path
       &middot;
       = link_to "Source", "http://github.com/michaeleconomy/blessr"
   #main
+    - if !flash[:notice].blank?
+      #flash
+        = h flash[:notice]
     = yield
     #footer
       .copyRight

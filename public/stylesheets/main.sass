@@ -16,7 +16,8 @@ body
 #header
   @include bodyElems
   background: #ddf1ff
-  background: -webkit-gradient(linear, 0% 0%, 0% 68%, from(#3CCCFF), to(#2266BB), color-stop(.2,#DDDDFF))
+  background: -webkit-gradient(linear, 0% 0%, 0% 93%, from(#9AB8FF), to(#9Fb8FF), color-stop(.8,#719fED))
+  background: -moz-linear-gradient(0% 93% 90deg,#9AB8FF, #9Fb8FF, #6193ED 80%)
   margin-bottom: 0
   border: 1px solid black
   border-bottom: 0
@@ -28,27 +29,42 @@ body
   h1
     margin-bottom: 0
     float: left
-    a
-      color: black
+    img
+      vertical-align: text-top
+    .smallText
+      font-size: .2em
   .nav
     float: right
+    a
+      color: #333
 
 #main
   @include bodyElems
-  background: #f1f5ff
+  background: #f7fcff
   border: 1px solid black
   border-top: 0
+  -moz-border-bottom-left-radius: 10px
+  -moz-border-bottom-right-radius: 10px
+  border-bottom-left-radius: 10px
+  border-bottom-right-radius: 10px
   #footer
     padding-top: 40px
     text-align: center
     font-size: .9em
     color: grey
 
+.contentBlock
+  margin-bottom: 3em
+  
 form
-  border: .2em dotted grey
+  @extend .contentBlock
+  border: .18em dotted grey
+  -moz-border-radius: 10px
+  border-radius: 10px
   padding: 1em
   label
     display: block
+
 textarea
   height: 4em
 
@@ -59,13 +75,10 @@ h1, h2, h3, h4, h5, h6
   margin-top: 0
   a
     text-decoration: none
-  
-// site wide styles
-.contentBlock
-  margin-bottom: 3em
 
 .smallText
   font-size: .5em
+
 // homepage
 #howDoesItWork
   overflow: auto

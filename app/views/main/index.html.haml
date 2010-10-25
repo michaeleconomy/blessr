@@ -1,15 +1,7 @@
 #description.contentBlock
   The original web 2.0 social micro-e-bless-you sneezeplatform.
 
-- form_for @bless_you,
-    :builder => BlessrFormBuilder,
-    :html => {:class => "contentBlock"} do |f|
-  %h2 Send an e-Bless-You NOW!
-  = f.text_field :to_email
-  = f.text_field :to_name
-  = f.text_field :your_name
-  = f.text_area :message
-  = f.submit "send e-Bless-You", :name => nil
+= render :partial => 'bless_yous/bless_you_form'
 
 %h2 How Does Blessr.com work?
 .contentBlock
@@ -28,10 +20,10 @@
       = link_to "blessr.com", "/"
     %li
       = image_tag "cloud.jpg"
-      blessr.com uses faster-than-sound* cloud technology to deliver your
-      eBlessYou promptly to the sneezer in realtime.
-  .footNotes
-    * over some large distances
+      blessr.com uses state of the art faster than sound* cloud technology to rapidly
+      deliver your eBlessYou promptly to the sneezer in realtime.
+      .footNotes
+        * over some large distances
 
 %h2 Recent e-Bless-Yous
 .blessYous
