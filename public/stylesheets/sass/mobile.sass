@@ -1,0 +1,75 @@
+//global layout
+body
+  font-family: sans-serif
+  background: white
+  color: black
+  padding: 0
+  margin: 0
+
+@mixin bodyElems
+  text-align: left
+  padding: 10px
+
+#header
+  @include bodyElems
+  background: #ddf1ff
+  background: -webkit-gradient(linear, 0% 0%, 0% 93%, from(#9AB8FF), to(#9Fb8FF), color-stop(.8,#719fED))
+  background: -moz-linear-gradient(0% 93% 90deg,#9AB8FF, #9Fb8FF, #6193ED 80%)
+  margin-bottom: 0
+  overflow: auto
+  h1
+    margin-bottom: 0
+    float: left
+    img
+      vertical-align: text-top
+    .smallText
+      font-size: .2em
+  .nav
+    float: right
+    a
+      color: #333
+
+#main
+  @include bodyElems
+  background: #f7fcff
+  #footer
+    padding-top: 40px
+    #copyright
+      font-size: .9em
+      color: grey
+
+.contentBlock
+  margin-bottom: 3em
+  
+form
+  @extend .contentBlock
+  label
+    display: block
+
+textarea
+  height: 4em
+
+a
+  color: #1144aa
+
+img
+  border: 0px
+
+h1, h2, h3, h4, h5, h6
+  margin-top: 0
+  a
+    text-decoration: none
+
+.smallText
+  font-size: .5em
+
+#flash
+  background: white
+  border: 1px solid gray
+  color: gray
+  font-weight: bold
+  margin-bottom: 2em
+  padding: 5px
+  text-align: center
+  -moz-border-radius: 10px
+  border-radius: 10px
